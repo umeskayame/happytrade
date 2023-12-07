@@ -178,8 +178,17 @@ a {
   cursor: pointer;
 }
 
+/* ログインページ */
+.form__wrapper2 {
+  padding-left: 600px;
+}
+
 /* トップページ */
 .copy-container h1{
   font-family: "Nico Moji";
 }
 
+.main-image {
+  height: 450px;
+  width: 100vh;
+}
