@@ -90,6 +90,7 @@ a {
   border: 1px #034D07 solid;
   border-radius: 3px;
   transition: 0.4s ease;
+  margin-left: 10px
 }
 .nav__logout:hover{
   color: #fff;
