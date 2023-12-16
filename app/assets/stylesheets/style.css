@@ -135,6 +135,10 @@ a {
   cursor: pointer;
 }
 
+.error-message {
+  color: #556b2f;
+}
+
 /* 新規登録ページ */
 
 .page-heading {
@@ -186,6 +190,10 @@ a {
 /* ログインページ */
 .form__wrapper2 {
   padding-left: 600px;
+}
+
+.login-flash-message {
+  color: #556b2f;
 }
 
 /* トップページ */

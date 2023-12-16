@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates :password, format: { with: VALID_PASSWORD_REGEX , message: "is invalid. Include both letters and numbers"}
+  validates :password, format: { with: VALID_PASSWORD_REGEX , message: " is invalid. Include both letters and numbers"}
   validates :last_name, presence: true
   validates :first_name, presence: true
   validates :last_name, format: {
