@@ -97,6 +97,40 @@ a {
   background: #034D07;
 }
 
+/* トップページ */
+
+h1 { font-size: 120px;
+}
+
+h2 { font-size: 40px;
+}
+
+.copy-container h1{
+  font-family: "Nico Moji";
+}
+
+.main-image {
+  height: 450px;
+  width: 100vh;
+}
+
+.copy-container {
+  padding: 0 325px;
+}
+
+.register {
+  border: 1px solid #034D07;
+  display: inline-block;
+  font-size: 50px;
+  color: #034D07;
+  padding: 70px;
+  margin: 100px 325px 0 325px;
+}
+
+.register_nav {
+  font-size: 20px;
+}
+
 /* フォーム周り */
 
 .form__wrapper {
@@ -196,12 +230,3 @@ a {
   color: #556b2f;
 }
 
-/* トップページ */
-.copy-container h1{
-  font-family: "Nico Moji";
-}
-
-.main-image {
-  height: 450px;
-  width: 100vh;
-}
