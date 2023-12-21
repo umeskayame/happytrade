@@ -1,0 +1,207 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #034D07;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: #00bb85;
+  margin-bottom: 48px;
+  padding: 20px 0;
+
+}
+.header inner {
+  width: 100%;
+  margin: 10px 600px 10px 5px;
+  
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+.logo {
+  width: 400px;
+}
+.nav__left {
+  float: left;
+}
+.nav__right {
+  padding-top: 25px;
+  float: right;
+}
+
+.nav__btn {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #034D07;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #034D07 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.nav__btn:hover{
+  color: #fff;
+  background: #034D07;
+}
+
+.nav__logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #034D07;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #034D07 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin-left: 10px
+}
+.nav__logout:hover{
+  color: #fff;
+  background: #034D07;
+}
+
+/* フォーム周り */
+
+.form__wrapper {
+  min-height: calc(100vh - 161px);
+  padding-left: 475px;
+}
+
+.form__text {
+  width: 50%;
+}
+
+.field{
+  margin: 10px 0;
+}
+
+.actions{
+  margin-bottom: 40px;
+}
+
+.form__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #034D07;
+  border: 1px #034D07 solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form__btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.error-message {
+  color: #556b2f;
+}
+
+/* 新規登録ページ */
+
+.page-heading {
+  color: #034D07;
+}
+
+.form-info-header{
+  font-size: 1.5em;
+  color:#034D07;
+  margin-bottom: 10px;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.field_favorite{
+  margin-bottom: 50px;
+}
+
+.field_name{
+  margin-top: 25px;
+}
+
+.input-birth-wrap{
+  display:flex;
+}
+
+.register-btn{
+  margin-top: 100px;
+}
+
+.register-red-btn {
+  width: 50%;
+  background: #034D07;
+  border: 1px solid #034D07;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ログインページ */
+.form__wrapper2 {
+  padding-left: 600px;
+}
+
+.login-flash-message {
+  color: #556b2f;
+}
+
+/* トップページ */
+.copy-container h1{
+  font-family: "Nico Moji";
+}
+
+.main-image {
+  height: 450px;
+  width: 100vh;
+}
