@@ -5,7 +5,10 @@
     <%= image_tag "topmain.jpg", class:"main-image" %>
   </div>
   <div class="contents">
-    <a class="register">アイテム登録
-    <p class="register_nav">交換する商品を登録してね</p></a>
+    <%= link_to "アイテム登録 ", new_item_path, class: :register %>
+    <p class="register_nav">交換する商品を登録してね</p>
   </div>  
 </div>
+
+
+

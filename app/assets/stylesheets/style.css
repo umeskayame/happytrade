@@ -126,10 +126,14 @@ h2 { font-size: 40px;
   background-color: #ffffef;
   padding: 70px;
   margin: 100px 325px 0 325px;
+  position: relative
 }
 
 .register_nav {
   font-size: 20px;
+  position: absolute;
+  top: 1100px;
+  left: 420px
 }
 
 /* フォーム周り */
@@ -231,3 +235,50 @@ h2 { font-size: 40px;
   color: #556b2f;
 }
 
+/* 商品登録ページ */
+
+.items-sell-title {
+  color: #034D07;
+}
+
+.items-sell-main {
+  margin: 0 500px;
+}
+
+.items-sell-title {
+  margin-bottom: 20px;
+}
+
+.items-text {
+  width: 500px;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+}
+
+.item-scheduled-delivery {
+  margin-bottom: 50px;
+}
+
+.sell-btn-contents {
+  margin: 25px 0 60px 0;
+}
+
+.sell-btn {
+  border: 1px solid #034D07;
+  background-color: #034D07;
+  color: #fff;
+  padding: 15px 225px;
+  font-size: 15px;
+  position: relative;
+}
+
+.back-btn {
+  display: block;
+  border: 1px solid #034D07;
+  margin-top: 10px;
+  padding: 0 200px;
+  position: absolute;
+  left: 533px;
+}
