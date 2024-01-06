@@ -11,10 +11,10 @@ class Item < ApplicationRecord
   validates :image, presence: true
   validates :item_name, presence: true
   validates :description, presence: true
-  validates :category_id, presence: true, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :status_id, presence: true, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :prefecture_id, presence: true, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :shipping_day_id, presence: true, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :category_id, presence: true, numericality: { other_than: 1 , message: "を入力してください"}
+  validates :status_id, presence: true, numericality: { other_than: 1 , message: "を入力してください"}
+  validates :prefecture_id, presence: true, numericality: { other_than: 1 , message: "を入力してください"}
+  validates :shipping_day_id, presence: true, numericality: { other_than: 1 , message: "を入力してください"}
   validates :wanted_item, presence: true
 
 end

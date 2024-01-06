@@ -9,3 +9,14 @@ ja:
         kana_first_name: 名前（カナ）
         birthday: 生年月日
       
+      item:
+        image: 画像
+        item_name: アイテム名
+        description: アイテム説明
+        category_id: カテゴリ
+        status_id: アイテムの状態
+        prefecture_id: 発送元の地域
+        shipping_day_id: 発送までの日数
+        wanted_item: 獲得したいアイテム
+        user: ユーザー
+      
