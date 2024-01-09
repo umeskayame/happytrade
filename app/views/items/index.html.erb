@@ -17,7 +17,7 @@
         <li class='list'>
           <%= link_to items_path(item.id) do %>
           <div class='item-img-content'>
-          <%= image_tag item.image, class: "item-img" %>
+          <%= image_tag item.image.variant(resize: '250x250'), class: "item-img" %>
           </div>
           <% end %>
         
@@ -30,8 +30,8 @@
         <% end %>
 
       <% if @items.length == 0 %>
-      <div class='list'>
-        <h3>出品中のアイテムはありません。</h3>
+      <div class='no-item-list'>
+        <h3>現在出品中のアイテムはありません。</h3>
       </div>
       <% end %>
       

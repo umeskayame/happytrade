@@ -141,6 +141,29 @@ h2 { font-size: 40px;
   margin: 100px 0 0 500px;
 }
 
+.item-lists {
+  margin: 0 215px;
+}
+
+.list {
+  float:left;
+}
+
+.item-img {
+  padding: 15px;
+  height: 250px;
+}
+
+.item-name {
+  margin: 3px 0 0 12px;
+}
+
+.no-item-list h3 {
+  font-size: 30px;
+  color: #00bb85;
+  margin: 0 240px;
+}
+
 /* フォーム周り */
 
 .form__wrapper {
