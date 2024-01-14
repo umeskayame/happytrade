@@ -32,13 +32,13 @@ img {
 a {
   text-decoration: none;
   color: #034D07;
+  font-weight: bold;
 }
 
 /* ヘッダー */
 
 .header {
   background-color: #00bb85;
-  margin-bottom: 48px;
   padding: 20px 0;
 
 }
@@ -133,7 +133,7 @@ h2 { font-size: 40px;
 .register_nav {
   font-size: 20px;
   position: absolute;
-  top: 1100px;
+  top: 1050px;
   left: 420px
 }
 
@@ -270,7 +270,7 @@ h2 { font-size: 40px;
 }
 
 .items-sell-main {
-  margin: 0 500px;
+  margin: 0 450px;
 }
 
 .items-sell-title {
@@ -308,5 +308,103 @@ h2 { font-size: 40px;
   margin-top: 10px;
   padding: 0 200px;
   position: absolute;
-  left: 533px;
+  left: 480px;
+}
+
+/* アイテム詳細ページ */
+.item-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.item-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.item-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.item_green_btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+  
+}
+
+.or-text {
+  font-size: 20px;
+  margin-top: 17px;
+}
+
+.item-destroy {
+  text-align: center;
+  font-size: 17px;
+  color: #034D07;
+  margin: 8px 0px;
+  padding: 2vh 10vw;
+}
+
+.detail-table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.wanted_item {
+  width: 20%;
+  color: #034D07;
+  background-color: #ffffef;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.wanted_value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  color: #034D07;
+  background-color: #ffffef;
 }
