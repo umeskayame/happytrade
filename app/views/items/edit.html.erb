@@ -1,0 +1,92 @@
+<div class="items-sell-contents">
+  
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">アイテムの情報を入力</h2>
+    <%= form_with model: @item, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        アイテム画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /画像 %>
+    <%# アイテム名と説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        アイテム名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :item_name, class:"items-text", id:"item-name", placeholder:"アイテム名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          アイテムの説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"アイテムの説明（必須 1,000文字まで）（キャラクター名、アイドル名、注意点など）例）ガチャガチャでゲットした缶バッジです。新品未使用です。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /アイテム名と説明 %>
+
+    <%# アイテムの詳細 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">アイテムの詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+          アイテムの状態
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+    <%# /アイテムの詳細 %>
+
+    <%# 配送について %>
+    <div class="items-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          発送元の地域
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <div class="weight-bold-text">
+          発送までの日数
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:shipping_day_id, ShippingDay.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+      </div>
+    </div>
+    <%# /配送について %>
+
+    <%# 交換して獲得したいアイテム %>
+    <div class="wanted-item">
+      <div class="weight-bold-text">
+        交換して獲得したいアイテム
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :wanted_item, class:"items-text", id:"wanted-item", placeholder:"交換して獲得したいアイテムを入力してください" %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "出品する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', item_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+    <% end %>
+
+</div>
