@@ -50,7 +50,25 @@
       </tbody>
     </table>
   </div>
-  <%# /商品の概要 %>
+  
+  <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@item, @comment], local: true) do |form| %>
+        <%= form.text_area :content, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+      <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= comment.user.nickname %>：</strong>
+          <%= comment.content %>
+        </p>
+      <% end %>
+    </div>
 
   <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
 </div>
