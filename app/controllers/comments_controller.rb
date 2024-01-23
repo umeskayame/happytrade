@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
-  def create
+  before_action :authenticate_user! , only: [:create]
+  
+    def create
     @comment = Comment.create(comment_params)
     redirect_to "/items/#{@comment.item.id}"
   end
