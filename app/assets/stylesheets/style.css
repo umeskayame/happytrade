@@ -410,6 +410,8 @@ h2 { font-size: 40px;
   background-color: #ffffef;
 }
 
+/* コメント機能 */
+
 .container {
   background-color: #fff;
   min-width: 1200px;
@@ -444,4 +446,15 @@ h2 { font-size: 40px;
 
 .container strong p {
   color: #034D07;
+}
+
+.comment-button {
+  border-radius: 20px;
+  background-color: #ffffef;
+  color: #034D07;
+  font-weight: bold;
+  border: 1px solid #034D07;
+  padding: 5px;
+  margin-top: 10px;
+  
 }

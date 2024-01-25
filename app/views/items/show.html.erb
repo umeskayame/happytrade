@@ -54,8 +54,9 @@
   <div class="container">
     <% if user_signed_in? %>
       <%= form_with(model: [@item, @comment], local: true) do |form| %>
-        <%= form.text_area :content, class:"comment-text", placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "送信する", class:"send" %>
+        <%= form.text_area :content, class:"comment-text", id:"commentInput", placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "送信する", class:"send", data: { turbo: false } %>
+      <button id='button' type='button' class='comment-button' data: { turbo: false }>交換を希望する</button>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
@@ -73,3 +74,4 @@
 
   <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
 </div>
+
