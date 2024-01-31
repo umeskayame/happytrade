@@ -43,7 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_18_100914) do
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
     t.text "content"
-    t.boolean "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_comments_on_item_id"

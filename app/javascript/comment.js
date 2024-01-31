@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // コメントが投稿された場合のフラグをリセットして、再度テンプレートを呼び出せるようにする
+  // コメントが投稿された際のフラグをリセットして、再度テンプレートを呼び出せるようにする
   document.addEventListener("turbo:submit-end", function() {
     templateButtonClicked = false;
   });
