@@ -70,6 +70,29 @@
         </p>
       <% end %>
       </div>
+      <div class="comments-answer">
+      <%# ログインしていて、かつコメントが存在し、アイテムが未交換の状態か %>
+      <% if user_signed_in? && @comment.present? %>
+        <%# ログイン中のユーザーIDとアイテム出品者のユーザーIDが一致しているか %>
+        <% if current_user.id == @item.user_id %>
+          <%= link_to "交換を許可する" %>
+          <%= link_to "お断り" %>
+        <%# ログイン中のユーザーIDとコメントした人のユーザーIDが一致しているか %>
+        <% elsif current_user.id == @comment.user_id %>
+          <%# 交渉が成立した場合 %>
+          <% if @item.trade.present? %>
+            <%= "交渉が成立しました。交換画面へ進みましょう" %>
+          <%# 交渉が成立しなかった場合 %>
+          <% else %>
+            <%= "残念ながら交渉が成立しませんでした。" %>
+          <% end %>
+        <%# アイテム出品者、コメント者のいずれでもない人%>
+        <% else %>
+          <%= "このアイテムはまだ交換の希望が出ていないか、もしくは交渉中の状態です。交渉中であっても交換が成立しない場合もあるため、希望があればコメントを残しておいてね" %>
+        <% end %>
+      <% end %>
+
+      </div>
   </div>
 
   <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
