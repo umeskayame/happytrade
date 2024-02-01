@@ -409,3 +409,52 @@ h2 { font-size: 40px;
   color: #034D07;
   background-color: #ffffef;
 }
+
+/* コメント機能 */
+
+.container {
+  background-color: #fff;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  margin-top: 50px;
+}
+
+.comment-text {
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.send {
+  width: 100%;
+  background-color: #00bb85;
+  border-radius: 20px;
+  border: 1px solid #00bb85;
+  font-size: 20px;
+  font-weight: bold;
+  color: #034D07;
+}
+
+.comments h4 {
+  font-weight: bold;
+}
+
+.comments strong {
+  color: #00bb85;
+}
+
+.container strong p {
+  color: #034D07;
+}
+
+.comment-button {
+  border-radius: 20px;
+  background-color: #ffffef;
+  color: #034D07;
+  font-weight: bold;
+  border: 1px solid #034D07;
+  padding: 5px;
+  margin-top: 10px;
+  
+}
