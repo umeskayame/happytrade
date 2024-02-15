@@ -13,4 +13,12 @@ class TradeDelivery
     validates :buyer_user_id
     validates :buyer_item_id
   end
+
+  def save
+    # 交換情報を保存し、変数tradeに代入する
+    trade = Trade.create(user_id: user_id, item_id: item_id, buyer_user_id: buyer_user_id, buyer_item_id: buyer_item_id)
+    # 住所を保存する
+    # trade_idには、変数tradeのidと指定する
+    Delivery.create(postcode: postcode, prefecture_id: prefecture_id, city: city, house_number: house_number, building: building, phone: phone, trade_id: trade.id)
+  end
 end
