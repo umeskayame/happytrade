@@ -14,7 +14,7 @@ class TradesController < ApplicationController
 
   def create
     @trade_delivery = TradeDelivery.new(trade_delivery_params)
-    if @purchase_delivery.save
+    if @trade_delivery.save
       redirect_to root_path
     else
       render :index, status: :unprocessable_entity
