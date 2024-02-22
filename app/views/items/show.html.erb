@@ -73,7 +73,7 @@
       <% if user_signed_in? && @comments.present? && @comments.any? { |comment| comment.is_exchange_proposal? } %>
         <%# ログイン中のユーザーIDとアイテム出品者のユーザーIDが一致しているか %>
         <% if current_user.id == @item.user_id %>
-          <%= link_to "交換を許可する", "/items/#{@item.id}/trades", method: :get %>
+          <%= link_to "交換へ進む", item_trades_path(item_id: @item.id), method: :get %>
           <%= link_to "お断り" %>
         <%# ログイン中のユーザーIDとコメントした人のユーザーIDが一致しているか %>
         <% else %>
