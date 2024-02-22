@@ -2,6 +2,7 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   has_many :comments
+  has_one :trade
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category

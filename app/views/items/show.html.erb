@@ -12,8 +12,6 @@
       <%= link_to "アイテムの編集", edit_item_path(@item.id), method: :get, data: { turbo: false }, class: :item_green_btn %>
       <p class="or-text">or</p>
       <%= link_to "削除", "/items/#{@item.id}", data: { turbo_method: :delete }, class:"item-destroy" %>
-    <% else %>  
-      <%= link_to "アイテム交換画面に進む", data: { turbo: false }, class: :item_green_btn %>
     <% end %>
   <% end %>
 
@@ -75,7 +73,7 @@
       <% if user_signed_in? && @comments.present? && @comments.any? { |comment| comment.is_exchange_proposal? } %>
         <%# ログイン中のユーザーIDとアイテム出品者のユーザーIDが一致しているか %>
         <% if current_user.id == @item.user_id %>
-          <%= link_to "交換を許可する" %>
+          <%= link_to "交換へ進む", item_trades_path(item_id: @item.id), method: :get %>
           <%= link_to "お断り" %>
         <%# ログイン中のユーザーIDとコメントした人のユーザーIDが一致しているか %>
         <% else %>
