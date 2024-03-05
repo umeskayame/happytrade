@@ -417,6 +417,7 @@ h2 { font-size: 40px;
   min-width: 1200px;
   padding: 10vh 15vw;
   margin-top: 50px;
+  position: relative;
 }
 
 .comment-text {
@@ -468,7 +469,7 @@ h2 { font-size: 40px;
   padding: 5px;
   background-color: #034D07;
   color: #FFF;
-  margin-left: 320px ;
+  position: absolute;
 }
 
 /* アイテム交換ページ */
