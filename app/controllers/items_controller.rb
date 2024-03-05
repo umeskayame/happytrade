@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @item.comments.includes(:user)
+    @has_exchange_comment = @comments.where(user_id: current_user.id).exists? if current_user
   end
 
   def edit 
