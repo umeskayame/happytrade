@@ -417,6 +417,7 @@ h2 { font-size: 40px;
   min-width: 1200px;
   padding: 10vh 15vw;
   margin-top: 50px;
+  position: relative;
 }
 
 .comment-text {
@@ -434,6 +435,10 @@ h2 { font-size: 40px;
   font-size: 20px;
   font-weight: bold;
   color: #034D07;
+}
+
+.comments {
+  margin-bottom: 30px;
 }
 
 .comments h4 {
@@ -456,6 +461,15 @@ h2 { font-size: 40px;
   border: 1px solid #034D07;
   padding: 5px;
   margin-top: 10px;
+}
+
+.item-trade {
+  border: 1px solid #034D07;
+  font-size: 20px;
+  padding: 5px;
+  background-color: #034D07;
+  color: #FFF;
+  position: absolute;
 }
 
 /* アイテム交換ページ */
