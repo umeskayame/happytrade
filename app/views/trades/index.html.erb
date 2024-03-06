@@ -1,7 +1,7 @@
 <div class='transaction-contents'>
   <div class='transaction-main'>
     <h1 class='transaction-title-text'>
-      アイテム交換の内容確認
+      これから交換するアイテム
     </h1>
     <%# 内容の表示 %>
     <div class='trade-item-info'>
@@ -9,16 +9,6 @@
       <div class='trade-item-right-content'>
         <h2 class='trade-item-text'>
           <%= @item.item_name%>
-        </h2>
-      </div>
-    </div>
-
-    <h2>交換する商品</h2>
-    <div class='trade-item-info'>
-      <%= image_tag @buyer_item.image, class: 'trade-item-img' %>
-      <div class='trade-item-right-content'>
-        <h2 class='trade-item-text'>
-          <%= @buyer_item.item_name %>
         </h2>
       </div>
     </div>
