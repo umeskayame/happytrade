@@ -79,12 +79,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_13_063109) do
   create_table "trades", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
-    t.bigint "buyer_user_id", null: false
-    t.bigint "buyer_item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["buyer_item_id"], name: "index_trades_on_buyer_item_id"
-    t.index ["buyer_user_id"], name: "index_trades_on_buyer_user_id"
     t.index ["item_id"], name: "index_trades_on_item_id"
     t.index ["user_id"], name: "index_trades_on_user_id"
   end
@@ -115,7 +111,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_13_063109) do
   add_foreign_key "deliveries", "trades"
   add_foreign_key "items", "users"
   add_foreign_key "trades", "items"
-  add_foreign_key "trades", "items", column: "buyer_item_id"
   add_foreign_key "trades", "users"
-  add_foreign_key "trades", "users", column: "buyer_user_id"
 end
