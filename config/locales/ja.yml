@@ -7,6 +7,12 @@ ja:
         first_name: 名前
         kana_last_name: 氏名（カナ）
         kana_first_name: 名前（カナ）
+        postcode: 郵便番号
+        prefecture_id: 都道府県
+        city: 市区町村
+        house_number: 番地
+        building: 建物名
+        phone: 電話番号
         birthday: 生年月日
       
       item:
