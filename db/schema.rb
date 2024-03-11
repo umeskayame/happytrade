@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_13_063109) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_13_063026) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -49,19 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_13_063109) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "deliveries", charset: "utf8", force: :cascade do |t|
-    t.bigint "trade_id", null: false
-    t.string "postcode", null: false
-    t.integer "prefecture_id", null: false
-    t.string "city", null: false
-    t.string "house_number", null: false
-    t.string "building"
-    t.string "phone", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["trade_id"], name: "index_deliveries_on_trade_id"
-  end
-
   create_table "items", charset: "utf8", force: :cascade do |t|
     t.string "item_name", null: false
     t.text "description", null: false
@@ -94,6 +81,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_13_063109) do
     t.string "first_name", null: false
     t.string "kana_last_name", null: false
     t.string "kana_first_name", null: false
+    t.string "postcode", null: false
+    t.integer "prefecture_id", null: false
+    t.string "city", null: false
+    t.string "house_number", null: false
+    t.string "building"
+    t.string "phone", null: false
     t.date "birthday", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -108,7 +101,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_13_063109) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "items"
   add_foreign_key "comments", "users"
-  add_foreign_key "deliveries", "trades"
   add_foreign_key "items", "users"
   add_foreign_key "trades", "items"
   add_foreign_key "trades", "users"

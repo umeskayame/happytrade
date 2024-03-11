@@ -215,7 +215,7 @@ h2 { font-size: 40px;
 .form-info-header{
   font-size: 1.5em;
   color:#034D07;
-  margin-bottom: 10px;
+  margin: 15px 0 10px 0;
 }
 
 .indispensable {
@@ -253,6 +253,34 @@ h2 { font-size: 40px;
   font-size: 14px;
   cursor: pointer;
 }
+
+.input-default {
+  width: 125px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.buy-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.buy-red-btn {
+  width: 100%;
+  background: #034D07;
+  border: 1px solid #034D07;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 
 /* ログインページ */
 .form__wrapper2 {
@@ -497,7 +525,7 @@ h2 { font-size: 40px;
   color: #034D07;
 }
 
-/* 購入内容の表示 */
+/* 交換内容の表示 */
 .trade-item-info {
   height: 150px;
   border-bottom: 2px solid #f5f5f5;
@@ -522,7 +550,7 @@ h2 { font-size: 40px;
   font-size: 20px;
 }
 
-/* /購入内容の表示 */
+/* 交換内容の表示 */
 
 /* 配送先の入力 */
 
@@ -537,29 +565,3 @@ h2 { font-size: 40px;
   margin-bottom: 10px;
 }
 
-.input-default {
-  width: 125px;
-  height: 30px;
-  margin-bottom: 10px;
-}
-
-.select-box {
-  height: 30px;
-  margin-bottom: 10px;
-}
-
-.buy-btn {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
-.buy-red-btn {
-  width: 100%;
-  background: #034D07;
-  border: 1px solid #034D07;
-  color: #fff;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
-}

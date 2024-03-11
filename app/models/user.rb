@@ -27,6 +27,13 @@ class User < ApplicationRecord
   validates :kana_first_name, format: {
     with: /\A[ァ-ヶー－]+\z/, message:"が無効です。全角（カタカナ）で入力してください"
   },on: :create
+  validates :postcode, presence: true
+  validates :postcode, format: { with: /\A\d{3}[-]\d{4}\z/, message: "が無効です。以下のように入力してください。 (e.g. 123-4567)" }
+  validates :prefecture_id, presence: true
+  validates :prefecture_id, numericality: { other_than: 1 , message: "を入力してください"}
+  validates :city, presence: true
+  validates :house_number, presence: true
+  validates :phone, presence: true
+  validates :phone, format: { with: /\A\d{10,11}\z/ }
   validates :birthday, presence: {message:"を入力してください"}
-
 end
