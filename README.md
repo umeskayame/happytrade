@@ -12,12 +12,12 @@
 | first_name         | string | null: false               |
 | kana_last_name     | string | null: false               |
 | kana_first_name    | string | null: false               |
-| postcode           | string |  null: false              |
-| prefecture_id      | integer|  null: false              |
-| city               | string |  null: false              |
-| house_number       | string |  null: false              |
+| postcode           | string | null: false               |
+| prefecture_id      | integer| null: false               |
+| city               | string | null: false               |
+| house_number       | string | null: false               |
 | building           | string |                           |
-| phone              | string |  null: false              |
+| phone              | string | null: false               |
 | birthday           | date   | null: false               |
 
 
