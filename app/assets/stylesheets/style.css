@@ -154,6 +154,11 @@ h2 { font-size: 40px;
   height: 250px;
 }
 
+.exchanged-item {
+  color: #ea352d;
+  font-weight: bold;
+}
+
 .item-name {
   margin: 3px 0 0 12px;
 }
@@ -265,13 +270,13 @@ h2 { font-size: 40px;
   margin-bottom: 10px;
 }
 
-.buy-btn {
+.trade-btn {
   width: 50%;
   margin: 0 auto;
   margin-top: 50px;
 }
 
-.buy-red-btn {
+.trade-red-btn {
   width: 100%;
   background: #034D07;
   border: 1px solid #034D07;

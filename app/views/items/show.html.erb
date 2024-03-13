@@ -7,7 +7,13 @@
       <%= image_tag @item.image ,class:"item-box-img" %>
     </div>
 
-  <% if user_signed_in? %>
+    <% if @item.trade != nil %>
+      <div class='exchanged-item'>
+      <span>交換済み商品です</span>
+      </div>
+    <% end %>
+
+  <% if user_signed_in? && @item.trade ==nil %>
     <% if current_user.id == @item.user_id %>  
       <%= link_to "アイテムの編集", edit_item_path(@item.id), method: :get, data: { turbo: false }, class: :item_green_btn %>
       <p class="or-text">or</p>
@@ -71,8 +77,8 @@
       <% end %>
       </div>
     <div class="comments-answer">
-      <%# ログインしていて、かつ自分が投稿したコメントが存在するか %>
-      <% if user_signed_in? && @has_exchange_comment %>
+      <%# ログインしていて、かつ自分が投稿したコメントが存在し、交換情報が空の状態か %>
+      <% if user_signed_in? && @has_exchange_comment && @item.trade == nil %>
         <% if @comments.any? { |comment| comment.is_exchange_proposal? } %>
           <%= link_to "商品交換へ進む", item_trades_path(@item.id), class: "item-trade" %>
         <% end %>

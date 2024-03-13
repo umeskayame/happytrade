@@ -25,8 +25,12 @@ class ItemsController < ApplicationController
     @has_exchange_comment = @comments.where(user_id: current_user.id).exists? if current_user
   end
 
-  def edit 
-    if current_user.id != @item.user_id
+  def edit
+    if user_signed_in? && @item.trade == nil
+      if current_user.id != @item.user_id 
+        redirect_to root_path
+      end
+    else
       redirect_to root_path
     end
   end
