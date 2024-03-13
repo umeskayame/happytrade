@@ -1,30 +1,33 @@
 class TradesController < ApplicationController
+  before_action :authenticate_user! , only: [:index, :create]
+  before_action :set_item , only: [:index, :create]
+
   def index
-    @item = Item.find(params[:item_id])
-    @buyer_item = @item
-    @buyer = @buyer_item.user
-    @user = current_user
-    @trade_delivery = TradeDelivery.new(
-      user_id: @user.id,
-      item_id: @item.id,
-      buyer_user_id: @buyer.id,
-      buyer_item_id: @buyer_item.id
-    )
+    if user_signed_in? && @item.trade == nil
+      @trade = Trade.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
-    @trade_delivery = TradeDelivery.new(trade_delivery_params)
-    if @trade_delivery.save
+    if user_signed_in? && @item.trade == nil
+      @trade = Trade.create(trade_params)
       redirect_to root_path
     else
-      render :index, status: :unprocessable_entity
+      redirect_to root_path
     end
   end
 
   private
 
-  def trade_delivery_params
-    params.require(:trade_delivery).permit(:user_id, :item_id, :buyer_user_id, :buyer_item_id, :postcode, :prefecture_id, :city, :house_number, :building, :phone)
+  def trade_params
+    params.require(:trade).permit(:user_id, :item_id).merge(user_id: current_user.id, item_id: params[:item_id])
   end
+
+  def set_item
+    @item = Item.find(params[:item_id])
+  end
+
 end
 
