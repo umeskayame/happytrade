@@ -1,5 +1,5 @@
 class TradesController < ApplicationController
-  before_action :authenticate_user! , only: [:index, :create]
+  before_action :authenticate_user! , only: [:index, :create, :show]
   before_action :set_item , only: [:index, :create]
 
   def index
@@ -11,9 +11,19 @@ class TradesController < ApplicationController
   end
 
   def create
+    @trade = Trade.new(trade_params)
     if user_signed_in? && @item.trade == nil
-      @trade = Trade.create(trade_params)
+      @trade.save
+      redirect_to "/items/#{@item.id}/trades/#{@trade.id}"
+    else
       redirect_to root_path
+    end
+  end
+
+  def show
+    @trade = Trade.find(params[:id])
+    if current_user.id == @trade.user_id
+      @item = Item.find(params[:item_id])
     else
       redirect_to root_path
     end
@@ -30,4 +40,3 @@ class TradesController < ApplicationController
   end
 
 end
-
