@@ -1,0 +1,36 @@
+<div class="trade-show">
+  <h2 class="item-address">アイテムの配送先</h2>
+    <p class="item-address-description">
+    双方のアイテムがどちらも交換済みとなり次第、下記の住所へアイテムを送ってください★
+    </p>
+
+    <table class="detail-address-table">
+        <tr>
+          <th class="detail-address">郵便番号</th>
+          <td class="detail-address-value"><%= @item.user.postcode %></td>
+        </tr>
+        <tr>
+          <th class="detail-address">都道府県</th>
+          <td class="detail-address-value"><%= Prefecture.find(@item.user.prefecture_id).name %></td>
+        </tr>
+        <tr>
+          <th class="detail-address">市町村</th>
+          <td class="detail-address-value"><%= @item.user.city %></td>
+        </tr>
+        <tr>
+          <th class="detail-address">番地</th>
+          <td class="detail-address-value"><%= @item.user.house_number %></td>
+        </tr>
+        <tr>
+          <th class="detail-address">建物名</th>
+          <td class="detail-address-value"><%= @item.user.building %></td>
+        </tr>
+        <tr>
+          <th class="detail-address">電話番号</th>
+          <td class="detail-address-value"><%= @item.user.phone %></td>
+        </tr>
+    </table>
+
+  <%= link_to "トップページへ戻る", root_path, data: { turbo: false }, class: :top_btn %>
+
+</div>

@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'items#index'
   resources :items do
     resources :comments, only: :create
-    resources :trades, only: [:index, :create]
+    resources :trades, only: [:index, :create, :show]
   end
 end
